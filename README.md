@@ -41,7 +41,7 @@ Modify the `scripts` section of `package.json` to use `npm-run-all`:
 
 ```json
 "scripts": {
-"runTest": "jest",
+"runTest": "npm install --force && jest",
 "report": "npx open-cli ./reports/test-report.html",
 "test": "run-s --continue-on-error runTest report"
 }
