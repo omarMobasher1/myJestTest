@@ -1,0 +1,34 @@
+{
+
+  "devDependencies": {
+
+    "jest": "^29.7.0",
+
+    "jest-html-reporter": "^4.0.1"
+
+  },
+
+  "scripts": {
+
+    "runTest": "jest",
+    "report": "npx open-cli ./reports/test-report.html",
+    "test": "run-s --continue-on-error runTest report"
+
+  },
+  "jest": {
+    "reporters": [
+      "default",
+      [
+        "jest-html-reporter",
+        {
+          "pageTitle": "Test Report",
+          "outputPath": "./reports/test-report.html",
+          "includeFailureMsg": true,
+          "includeConsoleLog": true
+        }
+      ]
+    ]
+  }
+
+}
+
